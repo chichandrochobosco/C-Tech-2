@@ -26,5 +26,8 @@ public class Transaccion {
         idGlobal++;
     }
     
+    public void emitirInforme(){
+        
+    }    
     
 }
