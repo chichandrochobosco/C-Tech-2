@@ -9,4 +9,7 @@ public class Palet {
         this.mercaderia = mercaderia;
     }
     
+    public void mostrarDatos(){
+        
+    }
 }

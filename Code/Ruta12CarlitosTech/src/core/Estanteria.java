@@ -7,4 +7,10 @@ public class Estanteria {
     public Estanteria() {
         
     }
+
+    public Palet[] getPalets() {
+        return palets;
+    }
+    
+    
 }

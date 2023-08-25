@@ -9,4 +9,10 @@ public class Pasillo {
             e = new Estanteria();
         }
     }
+
+    public Estanteria[] getEstanterias() {
+        return estanterias;
+    }
+    
+    
 }

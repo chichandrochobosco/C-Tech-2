@@ -16,7 +16,17 @@ public class Deposito {
     
     //Muestra la lista de la mercaderia en todos los palets ocupados
     public void verStock(){
-        //eloy
+        for(Pasillo p: pasillos){
+            Estanteria[] estanterias = p.getEstanterias();
+            for(Estanteria e: estanterias){
+                Palet[] palets = e.getPalets();
+                for(Palet palet: palets){
+                    if(palet!=null){
+                        palet.mostrarDatos();
+                    }
+                }
+            }
+        }
     }
     
     //Muestra las unidades de palet que se encuentran vacias (Su pasillo, estanteria y numero de palet. Todo por el indice interno)
@@ -53,7 +63,7 @@ public class Deposito {
         for (Transaccion transaccion : transacciones) {
             if (transaccion.fecha.isAfter(f1) && transaccion.fecha.isBefore(f2)) {
 
-                transaccion.ToString();
+                transaccion.emitirInforme();
             }
         }
 
