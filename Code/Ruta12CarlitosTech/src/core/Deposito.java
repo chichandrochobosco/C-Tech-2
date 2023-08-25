@@ -47,9 +47,16 @@ public class Deposito {
         }
     }
     
-    //muestra las fechas entre determinadas fechas
-    public void generarInformeFecha(LocalDate f1, LocalDate f2){
-        
+    //muestra las fechas entre determinadas fechas, terminado, commitear
+     public void generarInformeFecha(LocalDate f1, LocalDate f2) {
+
+        for (Transaccion transaccion : transacciones) {
+            if (transaccion.fecha.isAfter(f1) && transaccion.fecha.isBefore(f2)) {
+
+                transaccion.ToString();
+            }
+        }
+
     }
     
 }
