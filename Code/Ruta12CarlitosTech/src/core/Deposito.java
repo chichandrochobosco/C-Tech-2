@@ -184,8 +184,15 @@ public class Deposito {
     }
     
     //Asigna a un palet indicado los valores de ingreso
-    public void ingreso(ArrayList<Integer[]> coordenadas){
-        //lolo
+    public void ingreso(ArrayList<Integer[]> coordenadas, ArrayList<Palet>palets){
+        for(int i=0;i<coordenadas.size();i++){
+            
+            int pasillo = coordenadas.get(i)[1];
+            int estanteria = coordenadas.get(i)[2];
+            int palet = coordenadas.get(i)[3];
+            
+            pasillos[pasillo].getEstanterias()[estanteria].getPalets()[palet] = palets.get(i);
+        }
     }
     
     //muestra todas las transacciones
