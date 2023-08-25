@@ -56,7 +56,7 @@ public class Deposito {
         Scanner in = new Scanner(System.in);
         String destino, origen, marca, modelo, nombre, apellido, marcaMercaderia, nombreMercaderia;
         double peso;
-        int entrada, pasillo, estanteria, palet, matricula, dni;
+        int entrada, pasillo, estanteria, paletIngreso, matricula, dni;
         System.out.println("Ingrese 1-Egreso 2-Ingreso: ");
         entrada = in.nextInt();
         in.nextLine();
@@ -73,13 +73,13 @@ public class Deposito {
                 estanteria = in.nextInt();
                 in.nextLine();                
                 System.out.println("Numero de palet");
-                palet = in.nextInt();
+                paletIngreso = in.nextInt();
                 in.nextLine();
                 
-                Integer[] coordenadaEgreso = {pasillo, estanteria, palet};
+                Integer[] coordenadaEgreso = {pasillo, estanteria, paletIngreso};
                 coordenadas.add(coordenadaEgreso);
                 
-                palets.add(pasillos[pasillo].getEstanterias()[estanteria].getPalets()[palet]);
+                palets.add(pasillos[pasillo].getEstanterias()[estanteria].getPalets()[paletIngreso]);
                 
                 System.out.println("Ingrese 1-seguir retirando cualquier numero-finalizar egreso: ");
                 carga = in.nextInt();
@@ -114,7 +114,7 @@ public class Deposito {
         }else if(entrada==2){
             int carga = 1;
             ArrayList<Integer[]> espaciosVacios = verEspaciosVacios();
-            ArrayList<Palet> mercaderia = new ArrayList<>();
+            ArrayList<Palet> palets = new ArrayList<>();
             System.out.println("Espacios vacios: ");
             for(Integer[] p :  espaciosVacios){
                 System.out.println(p);
@@ -128,17 +128,24 @@ public class Deposito {
                 estanteria = in.nextInt();
                 in.nextLine();                
                 System.out.println("Numero de palet");
-                palet = in.nextInt();
+                paletIngreso = in.nextInt();
                 in.nextLine();
                 System.out.println("Numero de pasillo");
                 pasillo = in.nextInt();
                 in.nextLine();
-                marca
-                        nombre
-                        peso
                 
+                System.out.println("Ingrese marca de mercaderia: ");
+                marcaMercaderia = in.nextLine();
+                System.out.println("Ingrese nombre de mercaderia: ");
+                nombreMercaderia = in.nextLine();
+                System.out.println("Ingrese peso de mercaderia: ");
+                peso = in.nextDouble();
+                in.nextLine();
                 
-                Integer[] coordenadaIngreso = {pasillo, estanteria, palet};
+                Mercaderia mercaderia = new Mercaderia(marcaMercaderia, nombreMercaderia, peso);
+                Palet palet = new Palet(mercaderia);
+                palets.add(palet);
+                Integer[] coordenadaIngreso = {pasillo, estanteria, paletIngreso};
                 coordenadas.add(coordenadaIngreso);
                 
                 System.out.println("Ingrese 1-seguir retirando cualquier numero-finalizar egreso: ");
@@ -169,8 +176,8 @@ public class Deposito {
             in.nextLine();
             Conductor conductor = new Conductor(dni, nombre, apellido);
             
-            ingreso(coordenadas);
-            Transaccion t = new Transaccion(TipoTransaccion.INGRESO, camion, conductor, mercaderia, origen, destino);
+            ingreso(coordenadas, palets);
+            Transaccion t = new Transaccion(TipoTransaccion.INGRESO, camion, conductor, palets, origen, destino);
             
         }
         
