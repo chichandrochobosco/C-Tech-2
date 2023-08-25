@@ -187,6 +187,13 @@ public class Deposito {
     
     //Borrar los palets indicados en el egreso
     public void egreso(ArrayList<Integer[]> coordenadas){
+        for(int i=0; i<coordenadas.size();i++){
+            int pasillo = coordenadas.get(i)[1];
+            int estanteria = coordenadas.get(i)[2];
+            int palet = coordenadas.get(i)[3];
+            
+            pasillos[pasillo].getEstanterias()[estanteria].getPalets()[palet] = null;
+        }
         
     }
     
