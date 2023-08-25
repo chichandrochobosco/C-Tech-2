@@ -30,8 +30,22 @@ public class Deposito {
     }
     
     //Muestra las unidades de palet que se encuentran vacias (Su pasillo, estanteria y numero de palet. Todo por el indice interno)
-    public int[] verEspaciosVacios(){
-        //eloy
+    public ArrayList<Integer[]> verEspaciosVacios(){ //devuelve un arraylist de arrays de enteros, cada array tiene tres coordenadas {pasillo, estanteria y palet}
+        ArrayList<Integer[]>espaciosVacios = new ArrayList<>();
+        for (int i = 0; i < pasillos.length; i++) {
+            Estanteria[] estanterias = pasillos[i].getEstanterias();
+            for (int j = 0; j < estanterias.length; j++) {
+                Palet[] palets = estanterias[j].getPalets();
+                for (int k = 0; k < palets.length; k++) {
+                    if(palets[k]==null){
+                        Integer[] coordenadaVacia = {i,j,k};
+                        espaciosVacios.add(coordenadaVacia);
+                    }
+                }
+            }
+        }
+        
+        return espaciosVacios;
     }
     
     //Agrega una transaccion a la lista y ejecuta el metodo de la transaccion necesario
