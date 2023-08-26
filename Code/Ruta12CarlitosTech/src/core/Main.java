@@ -6,7 +6,9 @@ public class Main {
         
         Deposito deposito = inicializarDeposito();
         
-        deposito.realizarTransaccion();    
+        deposito.realizarTransaccion();
+        
+        deposito.verStock();
     }
     
     public static Deposito inicializarDeposito(){

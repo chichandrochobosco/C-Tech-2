@@ -6,16 +6,16 @@ import java.util.Scanner;
 
 public class Deposito {
 
-    private Pasillo[] pasillos;
+    private final Pasillo[] pasillos;
     private ArrayList<Transaccion> transacciones = new ArrayList<>();
-    private static Scanner in = new Scanner(System.in);
+    private static final Scanner in = new Scanner(System.in);
 
     public Deposito(Pasillo[] pasillos) {
         this.pasillos = pasillos;
     }
 
     //Muestra la lista de la mercaderia en todos los palets ocupados
-    public void verStock() {
+    public boolean verStock() {
         int cont = 0, i = 0, j = 0, k = 0;
         for (Pasillo p : pasillos) {
             Estanteria[] estanterias = p.getEstanterias();
@@ -36,7 +36,10 @@ public class Deposito {
 
         if (cont == 0) {
             System.out.println("El stock se encuentra totalmente vacio.");
+            return false;
         }
+
+        return true;
     }
 
     //Muestra las unidades de palet que se encuentran vacias (Su pasillo, estanteria y numero de palet. Todo por el indice interno)
@@ -57,32 +60,41 @@ public class Deposito {
 
         return espaciosVacios;
     }
-    
-    public void verEspaciosVacios(){
+
+    public boolean verEspaciosVacios() {
         ArrayList<Integer[]> espaciosVacios = devolverEspaciosVacios();
+        if (espaciosVacios.isEmpty()) {
+            System.out.println("No hay espacios libres");
+            return false;
+        }
         System.out.println("Espacios vacios: ");
         for (Integer[] p : espaciosVacios) {
             for (int i = 0; i < p.length; i++) {
-                System.out.println("Pasillo:" + (p[0] + 1) + " Estanteria:" + (p[1] + 1) + " Palet:" + (p[2] + 1));
+                System.out.println("Pasillo:" + p[0] + " Estanteria:" + p[1] + " Palet:" + p[2]);
             }
         }
+        return true;
     }
 
     //Agrega una transaccion a la lista y ejecuta el metodo de la transaccion necesario
     public void realizarTransaccion() {
         //preguntar que transaccion hacer y en que coordenadas
-        ArrayList<Integer[]> coordenadas = new ArrayList<>();
         int entrada;
         System.out.println("Ingrese 1-Egreso 2-Ingreso: ");
         entrada = in.nextInt();
         in.nextLine();
+
         if (entrada == 1) {
             int carga = 1;
+            ArrayList<Integer[]> coordenadas = new ArrayList<>();
             ArrayList<Palet> palets = new ArrayList<>();
-            verStock();
-            System.out.println("Ingrese coordenadas del palet a retirar: ");
-            do {
 
+            if (!verStock()) {
+                carga = 0;
+            }
+
+            while (carga == 1) {
+                System.out.println("Ingrese coordenadas del palet a retirar: ");
                 Integer[] coordenadaEgreso = ingresarCoordenada();
                 coordenadas.add(coordenadaEgreso);
                 palets.add(getPaletByCoordenada(coordenadaEgreso));
@@ -90,17 +102,25 @@ public class Deposito {
                 System.out.println("Ingrese 1-seguir retirando cualquier numero-finalizar egreso: ");
                 carga = in.nextInt();
                 in.nextLine();
-            } while (carga == 1);
+            }
 
-            egreso(coordenadas);
-            Transaccion t = ingresarTransaccion(TipoTransaccion.EGRESO, palets);
+            if (!coordenadas.isEmpty()) {
+                egreso(coordenadas);
+                Transaccion t = ingresarTransaccion(TipoTransaccion.EGRESO, palets);
+                transacciones.add(t);
+            }
 
         } else if (entrada == 2) {
             int carga = 1;
+            ArrayList<Integer[]> coordenadas = new ArrayList<>();
             ArrayList<Palet> palets = new ArrayList<>();
-            verEspaciosVacios();
-            System.out.println("Ingrese coordenadas del palet a ingresar: ");
-            do {
+
+            if (!verEspaciosVacios()) {
+                carga = 0;
+            }
+
+            while (carga == 1) {
+                System.out.println("Ingrese coordenadas del palet a ingresar: ");
                 Integer[] coordenadaIngreso = ingresarCoordenada();
 
                 Mercaderia mercaderia = ingresarMercaderia();
@@ -111,14 +131,15 @@ public class Deposito {
 
                 System.out.println("Ingrese 1-seguir retirando cualquier numero-finalizar egreso: ");
                 carga = in.nextInt();
+                in.nextLine();
+            }
 
-            } while (carga == 1);
-
-            ingreso(coordenadas, palets);
-            Transaccion t = ingresarTransaccion(TipoTransaccion.INGRESO, palets);
-
+            if (!coordenadas.isEmpty()) {
+                ingreso(coordenadas, palets);
+                Transaccion t = ingresarTransaccion(TipoTransaccion.INGRESO, palets);
+                transacciones.add(t);
+            }
         }
-
     }
 
     //Borrar los palets indicados en el egreso
@@ -137,12 +158,11 @@ public class Deposito {
     //Asigna a un palet indicado los valores de ingreso
     public void ingreso(ArrayList<Integer[]> coordenadas, ArrayList<Palet> palets) {
         for (int i = 0; i < coordenadas.size(); i++) {
+            
+            Integer[] coordenada = coordenadas.get(i);
 
-            int pasillo = coordenadas.get(i)[0];
-            int estanteria = coordenadas.get(i)[1];
-            int palet = coordenadas.get(i)[2];
-
-            pasillos[pasillo].getEstanterias()[estanteria].getPalets()[palet] = palets.get(i);
+            Palet p = getPaletByCoordenada(coordenada);
+            p = palets.get(i);
         }
     }
 
@@ -153,7 +173,7 @@ public class Deposito {
         }
     }
 
-    //muestra las fechas entre determinadas fechas, terminado, commitear
+    //muestra las transacciones entre determinadas fechas
     public void generarInformeFecha(LocalDate f1, LocalDate f2) {
 
         for (Transaccion transaccion : transacciones) {
