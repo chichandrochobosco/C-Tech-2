@@ -18,14 +18,16 @@ public class Main {
     public static void menu(Deposito deposito){
         int opc;
         do{
-            System.out.println(":-------------------------------------------------------------:");
+            
+            System.out.println("Bienvenido a Ruta 12");
+            System.out.println("-------------------------------------------------------------");
             System.out.println("OPCIONES");
-            System.out.println("1.- Ver stock");
-            System.out.println("2.- Ver espacios vacios del deposito");
-            System.out.println("3.- Realizar una transaccion de Ingreso o Egreso");
-            System.out.println("4.- Generar informe total");
-            System.out.println("5.- Generar informe de determinadas fechas");
-            System.out.println("6.- SALIR");
+            System.out.println("1- Ver stock");
+            System.out.println("2- Ver espacios vacios del deposito");
+            System.out.println("3- Realizar una transaccion de Ingreso o Egreso");
+            System.out.println("4- Generar informe total");
+            System.out.println("5- Generar informe de determinadas fechas");
+            System.out.println("6- SALIR");
             opc = in.nextInt();
             in.nextLine();
 

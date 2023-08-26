@@ -71,9 +71,8 @@ public class Deposito {
         }
         System.out.println("Espacios vacios: ");
         for (Integer[] p : espaciosVacios) {
-            for (int i = 0; i < p.length; i++) {
-                System.out.println("Pasillo:" + p[0] + " Estanteria:" + p[1] + " Palet:" + p[2]);
-            }
+            System.out.println("Pasillo:" + p[0] + " Estanteria:" + p[1] + " Palet:" + p[2]);
+            
         }
         return true;
     }
@@ -84,6 +83,10 @@ public class Deposito {
         int entrada;
         System.out.println("Ingrese 1-Egreso 2-Ingreso: ");
         entrada = in.nextInt();
+        while(entrada <1 || entrada >2 ){
+            System.out.println("Reingrese la operacion: 1-Egreso 2-Ingreso");
+            entrada = in.nextInt();
+        }
         in.nextLine();
 
         if (entrada == 1) {
@@ -220,11 +223,11 @@ public class Deposito {
     private Camion ingresarCamion() {
         String marca, modelo;
         int matricula;
-        System.out.println("Ingrese marca: ");
+        System.out.println("Ingrese marca del camion: ");
         marca = in.nextLine();
-        System.out.println("Ingrese modelo: ");
+        System.out.println("Ingrese modelo del camion: ");
         modelo = in.nextLine();
-        System.out.println("Ingrese matricula: ");
+        System.out.println("Ingrese matricula del camion: ");
         matricula = in.nextInt();
         in.nextLine();
         return new Camion(matricula, marca, modelo);
@@ -234,11 +237,11 @@ public class Deposito {
         String nombre, apellido;
         int dni;
 
-        System.out.println("Ingrese Nombre: ");
+        System.out.println("Ingrese Nombre del conductor: ");
         nombre = in.nextLine();
-        System.out.println("Ingrese Apellido: ");
+        System.out.println("Ingrese Apellido del conductor: ");
         apellido = in.nextLine();
-        System.out.println("Ingrese dni: ");
+        System.out.println("Ingrese dni del conductor: ");
         dni = in.nextInt();
         in.nextLine();
         return new Conductor(dni, nombre, apellido);

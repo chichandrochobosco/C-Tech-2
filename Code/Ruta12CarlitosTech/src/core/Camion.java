@@ -11,4 +11,17 @@ public class Camion {
         this.marca = marca;
         this.modelo = modelo;
     }
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+    
 }

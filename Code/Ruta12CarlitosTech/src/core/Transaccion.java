@@ -27,7 +27,7 @@ public class Transaccion {
     }
     
     public void emitirInforme(){
-        System.out.println("Transaccion{" + "id=" + id + ", tipo=" + tipo + ", camion=" + camion + ", conductor=" + conductor + ", fecha=" + fecha + ", origen=" + origen + ", destino=" + destino + '}');
+        System.out.println("Transaccio: id= "+id+", tipo= " + tipo + ", camion= " + camion.getMatricula() + ", dni del conductor =" + conductor.getDni() + ", fecha= " + fecha + ", origen= " + origen + ", destino= " + destino);
     }    
 
     public LocalDate getFecha() {
