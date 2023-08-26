@@ -16,10 +16,12 @@ public class Deposito {
 
     //Muestra la lista de la mercaderia en todos los palets ocupados
     public boolean verStock() {
-        int cont = 0, i = 0, j = 0, k = 0;
+        int cont = 0, i = 0;
         for (Pasillo p : pasillos) {
+            int j = 0;
             Estanteria[] estanterias = p.getEstanterias();
             for (Estanteria e : estanterias) {
+                int k = 0;
                 Palet[] palets = e.getPalets();
                 for (Palet palet : palets) {
                     if (palet != null) {
@@ -129,7 +131,7 @@ public class Deposito {
 
                 coordenadas.add(coordenadaIngreso);
 
-                System.out.println("Ingrese 1-seguir retirando cualquier numero-finalizar egreso: ");
+                System.out.println("Ingrese 1-seguir ingresando cualquier numero-finalizar egreso: ");
                 carga = in.nextInt();
                 in.nextLine();
             }
@@ -145,13 +147,14 @@ public class Deposito {
     //Borrar los palets indicados en el egreso
     public void egreso(ArrayList<Integer[]> coordenadas) {
         for (int i = 0; i < coordenadas.size(); i++) {
-            int pasillo = coordenadas.get(i)[0];
-            int estanteria = coordenadas.get(i)[1];
-            int palet = coordenadas.get(i)[2];
-            Integer[] coordenada = {pasillo, estanteria, palet};
+            
+            Integer[] coordenada = coordenadas.get(i);
 
-            Palet p = getPaletByCoordenada(coordenada);
-            p = null;
+            int pasillo = coordenada[0];
+            int estanteria = coordenada[1];
+            int palet = coordenada[2];
+            
+            pasillos[pasillo].getEstanterias()[estanteria].getPalets()[palet] = null;
         }
     }
 
@@ -160,9 +163,11 @@ public class Deposito {
         for (int i = 0; i < coordenadas.size(); i++) {
             
             Integer[] coordenada = coordenadas.get(i);
-
-            Palet p = getPaletByCoordenada(coordenada);
-            p = palets.get(i);
+            int pasillo = coordenada[0];
+            int estanteria = coordenada[1];
+            int palet = coordenada[2];
+            
+            pasillos[pasillo].getEstanterias()[estanteria].getPalets()[palet] = palets.get(i);
         }
     }
 
