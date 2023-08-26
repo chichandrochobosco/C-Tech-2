@@ -2,9 +2,9 @@
 package core;
 
 public class Conductor {
-    int dni;
-    String nombre;
-    String apellido;
+    private int dni;
+    private String nombre;
+    private String apellido;
 
     public Conductor(int dni, String nombre, String apellido) {
         this.dni = dni;

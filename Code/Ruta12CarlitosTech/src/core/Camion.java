@@ -2,9 +2,9 @@
 package core;
 
 public class Camion {
-    int matricula;
-    String marca;
-    String modelo;
+    private int matricula;
+    private String marca;
+    private String modelo;
 
     public Camion(int matricula, String marca, String modelo) {
         this.matricula = matricula;

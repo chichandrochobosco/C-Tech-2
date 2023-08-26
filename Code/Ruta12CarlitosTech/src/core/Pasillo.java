@@ -2,12 +2,16 @@
 package core;
 
 public class Pasillo {
-    Estanteria estanterias[]= new Estanteria[2];
+    private Estanteria estanterias[];
 
-    public Pasillo() {
+    public Pasillo(Estanteria estanterias[]) {
+        this.estanterias = estanterias;
+        /*
         for(Estanteria e: estanterias){
             e = new Estanteria();
         }
+        */
+        
     }
 
     public Estanteria[] getEstanterias() {
