@@ -1,0 +1,114 @@
+<mxfile host="app.diagrams.net" modified="2023-08-22T14:53:41.198Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="CWYgwDhQvKWmdzIAE9ym" version="21.6.8" type="device">
+  <diagram name="Página-1" id="Zokr76eYt8YNLjr2oupd">
+    <mxGraphModel dx="926" dy="449" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zNTk1zl7-os2c1LC80qj-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zNTk1zl7-os2c1LC80qj-2" target="zNTk1zl7-os2c1LC80qj-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-2" value="Empleado" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-4" value="Sistema Gestor Deposito" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="270" y="180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zNTk1zl7-os2c1LC80qj-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-7" value="Empleado" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-8" value="Sistena" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="zNTk1zl7-os2c1LC80qj-10" target="zNTk1zl7-os2c1LC80qj-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-10" value="Solicita egresar Mercaderia" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="275" y="330" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="zNTk1zl7-os2c1LC80qj-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-12" value="Empleado" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="zNTk1zl7-os2c1LC80qj-14" target="zNTk1zl7-os2c1LC80qj-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-14" value="Sistema gestor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="zNTk1zl7-os2c1LC80qj-17" target="zNTk1zl7-os2c1LC80qj-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="859.01" y="533.04" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="zNTk1zl7-os2c1LC80qj-17" target="zNTk1zl7-os2c1LC80qj-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="zNTk1zl7-os2c1LC80qj-17" target="zNTk1zl7-os2c1LC80qj-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-17" value="Lectura Inventario" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="710" y="670" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="zNTk1zl7-os2c1LC80qj-19" target="zNTk1zl7-os2c1LC80qj-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-19" value="Ingresar en que camión y conductor se retira" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="670" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" target="zNTk1zl7-os2c1LC80qj-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="710" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-22" value="Inventario" style="shape=internalStorage;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="500" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-24" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#007FFF;" vertex="1" parent="1">
+          <mxGeometry x="290" y="280" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-25" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF3333;" vertex="1" parent="1">
+          <mxGeometry x="290" y="610" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-26" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF3333;" vertex="1" parent="1">
+          <mxGeometry x="510" y="620" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-27" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF3333;" vertex="1" parent="1">
+          <mxGeometry x="680" y="620" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-28" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF3333;" vertex="1" parent="1">
+          <mxGeometry x="995" y="430" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-30" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Si la Mercadería se Encuentra&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="827" y="670" width="153" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-31" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Si la mercadería no se encuentra&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="827" y="820" width="153" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-32" value="Emitir mensaje de mercadería no encontrada" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1045" y="820" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-36" value="Solicita egresar Mercaderia" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="320" y="670" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="zNTk1zl7-os2c1LC80qj-37" target="zNTk1zl7-os2c1LC80qj-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-37" value="Ingresar el destino de la mercaderia" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="670" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zNTk1zl7-os2c1LC80qj-40" value="Emitir informe de viaje" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="670" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
