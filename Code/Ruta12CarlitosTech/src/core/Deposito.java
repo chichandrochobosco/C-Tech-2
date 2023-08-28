@@ -148,7 +148,7 @@ public class Deposito {
     }
 
     //Borrar los palets indicados en el egreso
-    public void egreso(ArrayList<Integer[]> coordenadas) {
+    public void egreso(ArrayList<Integer[]> coordenadas) throws ArrayIndexOutOfBoundsException{
         for (int i = 0; i < coordenadas.size(); i++) {
             
             Integer[] coordenada = coordenadas.get(i);
@@ -162,7 +162,7 @@ public class Deposito {
     }
 
     //Asigna a un palet indicado los valores de ingreso
-    public void ingreso(ArrayList<Integer[]> coordenadas, ArrayList<Palet> palets) {
+    public void ingreso(ArrayList<Integer[]> coordenadas, ArrayList<Palet> palets) throws ArrayIndexOutOfBoundsException{
         for (int i = 0; i < coordenadas.size(); i++) {
             
             Integer[] coordenada = coordenadas.get(i);

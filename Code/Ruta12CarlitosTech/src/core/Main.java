@@ -39,7 +39,13 @@ public class Main {
                     deposito.verEspaciosVacios();
                     break;
                 case 3:
-                    deposito.realizarTransaccion();
+                    try {
+                        deposito.realizarTransaccion();
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                        System.out.println("---------ERROR----------");
+                        System.out.println("Se ingreso una ubicacion de palet no valida");
+                        System.out.println("------------------------");
+                    }
                     break;
                 case 4:
                     deposito.generarInformeTotal();
